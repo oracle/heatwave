@@ -1,0 +1,30 @@
+-- Copyright (c) 2021, Oracle and/or its affiliates.
+-- Licensed under the Apache License, Version 2.0 (the "License");
+--  you may not use this file except in compliance with the License.
+--  You may obtain a copy of the License at
+-- 
+--     https://www.apache.org/licenses/LICENSE-2.0
+-- 
+--  Unless required by applicable law or agreed to in writing, software
+--  distributed under the License is distributed on an "AS IS" BASIS,
+--  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+--  See the License for the specific language governing permissions and
+--  limitations under the License.
+
+SELECT su_name,
+       su_address
+FROM SUPPLIER,
+     NATION
+WHERE su_suppkey IN
+    (SELECT mod(s_i_id * s_w_id, 10000)
+     FROM STOCK
+     INNER JOIN ITEM ON i_id = s_i_id
+     INNER JOIN ORDER_LINE ON ol_i_id = s_i_id
+     WHERE ol_delivery_d > '2010-05-23 12:00:00'
+       AND i_data LIKE 'co%'
+     GROUP BY s_i_id,
+              s_w_id,
+              s_quantity HAVING 2*s_quantity > sum(ol_quantity))
+  AND su_nationkey = n_nationkey
+  AND n_name = 'Germany'
+ORDER BY su_name;

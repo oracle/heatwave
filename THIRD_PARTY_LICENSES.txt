@@ -1,0 +1,21 @@
+The SQL queries and table creation DDL derive from material licensed as follows:
+TPC Benchmark™, TPC-H, TPC-C, QppH, QthH, and QphH are trademarks of the Transaction Processing Performance Council.
+All parties are granted permission to copy and distribute to any party without fee all or part of this material 
+provided that: 1) copying and distribution is done for the primary purpose of disseminating TPC material; 
+2) the TPC copyright notice, the title of the publication, and its date appear, and notice is given that copying 
+is by permission of the Transaction Processing Performance Council.
+
+The OLTPBenchmark code is licensed under Apache License as follows:
+Copyright 2015 by OLTPBenchmark Project
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
