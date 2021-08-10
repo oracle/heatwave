@@ -50,28 +50,36 @@ Specific changes were
    * [sample_tpcc_config.xml](config/sample_tpcc_config.xml)
    
 ## To build the source code with HeatWave related changes
+```
 ant build 
+```
    
 ## Table creation of mixedworkloads (tpcc and chbenchmark)
+```
 ./oltpbenchmark -b chbenchmark -c config/sample_chbenchmark_config.xml --create=true
 ./oltpbenchmark -b tpcc -c config/sample_tpcc_config.xml --create=true
+```
 
 ## Data population of mixedworkloads (tpcc and chbenchmark)
+```
 ./oltpbenchmark -b chbenchmark -c config/sample_chbenchmark_config.xml --load=true
 ./oltpbenchmark -b tpcc -c config/sample_tpcc_config.xml --load=true
+```
 
 ## Load data into HeatWave
+```
 Run [secondary_load.sql] (HeatWave/secondary_load.sql) to load data into the HeatWave cluster
+```
 
 ## MixedWorkloads (tpcc and chbenchmark) execution using 2 parallel sessions:
 Session 1:
-
+```
 ./oltpbenchmark --bench chbenchmark --config ./config/sample_chbenchmark_config.xml --execute=true -s 5 -o runOutputId0 -v
-
+```
 Session 2:
-
+```
 ./oltpbenchmark --bench tpcc --config ./config/sample_tpcc_config.xml --execute=true -s 5 -o runOutputId1 -v
-
+```
  
  [1]: http://www.vldb.org/pvldb/vol7/p277-difallah.pdf
  [2]: http://www.tpc.org/tpcc/
