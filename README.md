@@ -7,4 +7,4 @@ This eliminates the need for complex, time-consuming, and expensive data movemen
 Your applications connect to the HeatWave cluster through standard MySQL protocols, and You can manage HeatWave via Oracle Cloud REST APIs, SDKs, and the Console.
 
 This repository contains sub-folder(s) that have files pertaining to specific performance benchmarks
-* [CH-benCHmark](heatwave-chbench)
+* [CH-benCHmark](heatwave-chbench) - contains files that were modified in the OLPTBench benchmark code for testing mixed workloads (CH-benCHmark) against MYSQL HeatWave
