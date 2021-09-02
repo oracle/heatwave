@@ -11,10 +11,9 @@
 --  See the License for the specific language governing permissions and
 --  limitations under the License.
 
---mark tables for HeatWave
-alter table CUSTOMER         secondary_engine rapid;
+-- mark tables for HeatWave
+alter table  CUSTOMER        secondary_engine rapid;
 alter table  DISTRICT        secondary_engine rapid;
-alter table  HISTORY         secondary_engine rapid;
 alter table  ITEM            secondary_engine rapid;
 alter table  NATION          secondary_engine rapid;
 alter table  NEW_ORDER       secondary_engine rapid;
@@ -26,9 +25,8 @@ alter table  SUPPLIER        secondary_engine rapid;
 alter table  WAREHOUSE       secondary_engine rapid;
 
 -- Secondary Load into HeatWave
-alter table CUSTOMER         secondary_load;
+alter table  CUSTOMER        secondary_load;
 alter table  DISTRICT        secondary_load;
-alter table  HISTORY         secondary_load;
 alter table  ITEM            secondary_load;
 alter table  NATION          secondary_load;
 alter table  NEW_ORDER       secondary_load;
