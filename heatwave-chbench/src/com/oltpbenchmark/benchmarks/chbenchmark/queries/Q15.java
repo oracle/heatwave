@@ -47,6 +47,11 @@ public class Q15 extends GenericQuery {
             + "ORDER BY su_suppkey"
         );
 
+    public final SQLStmt dropview_stmt = new SQLStmt(
+              "DROP VIEW revenue0"
+        );
+
+
 		protected SQLStmt get_query() {
 	    return query_stmt;
 	}

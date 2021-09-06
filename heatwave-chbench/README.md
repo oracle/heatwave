@@ -68,7 +68,7 @@ ant build
 
 ## Load data into HeatWave
 ```
-Run [secondary_load.sql] (HeatWave/secondary_load.sql) to load data into the HeatWave cluster
+Run [secondary_load.sql](HeatWave/secondary_load.sql) to load data into the HeatWave cluster
 ```
 
 ## MixedWorkloads (tpcc and chbenchmark) execution using 2 parallel sessions:
