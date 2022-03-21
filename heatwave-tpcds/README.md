@@ -32,10 +32,10 @@ HeatWave. The schema and queries listed here are specifically for the 10TB scale
 To run TPC-DS queries in HeatWave
 1. Generate TPC-DS data using TPC-DS data generation tool
 2. Provision MySQL Database Service instance. See [Getting Started with MySQL Database Service][6]
-3. Run [create_tables.sql](TPCDS/create_tables.sql) to create TPC-DS schema on MySQL Database Service instance 
+3. Run [create_tables.sql](10TB/TPCDS/create_tables.sql) to create TPC-DS schema on MySQL Database Service instance 
 4. Import TPC-DS data generated to MySQL Database Service instance. See [MySQL Shell Parallel Table Import Utility documentation][7]
 5. Add a HeatWave cluster to MySQL Database Service instance. See [HeatWave][5] documentation
-6. Run [secondary_load.sql](HeatWave/secondary_load.sql) to configure and load data to HeatWave cluster
+6. Run [secondary_load.sql](10TB/HeatWave/secondary_load.sql) to configure and load data to HeatWave cluster
 7. You are now ready to run the queries derived from TPC-DS
  
 
