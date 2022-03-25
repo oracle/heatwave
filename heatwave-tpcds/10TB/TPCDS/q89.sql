@@ -33,9 +33,9 @@ FROM (
          AND SS_SOLD_DATE_SK = D_DATE_SK
          AND SS_STORE_SK = S_STORE_SK
          AND D_YEAR IN (2000) 
-         AND I_CATEGORY IN ('Home','Music','Books') 
+         AND ((I_CATEGORY IN ('Home','Music','Books') 
                AND I_CLASS IN ('glassware', 'classical', 'fiction') ) 
-           OR I_CATEGORY IN ('Jewelry','Sports','Women') 
+           OR (I_CATEGORY IN ('Jewelry','Sports','Women') 
                AND I_CLASS IN ('semi-precious','baseball','dresses') )) 
    GROUP BY I_CATEGORY
             , I_CLASS

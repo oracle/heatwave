@@ -26,7 +26,7 @@ FROM WEB_SALES
      , ITEM 
      , DATE_DIM 
 WHERE WS_ITEM_SK = I_ITEM_SK
-      AND I_CATEGORYIN ('Electronics', 'Books', 'Women') 
+      AND I_CATEGORY IN ('Electronics', 'Books', 'Women') 
       AND WS_SOLD_DATE_SK = D_DATE_SK
       AND D_DATE BETWEEN CAST('1998-01-06' AS DATE) AND 
               DATE_ADD(DATE'1998-01-06', INTERVAL 30 DAY) 

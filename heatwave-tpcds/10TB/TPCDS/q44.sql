@@ -32,7 +32,7 @@ FROM(
                    (SELECT /*+ SET_VAR(USE_SECONDARY_ENGINE=FORCED) */ AVG(SS_NET_PROFIT) RANK_COL 
                     FROM STORE_SALES 
                     WHERE SS_STORE_SK = 366 
-                          AND SS_DEMO_SK IS NULL 
+                          AND SS_HDEMO_SK IS NULL 
                     GROUP BY SS_STORE_SK))V1)V11 
     WHERE RNK < 11) ASCEDING, 
    (SELECT /*+ SET_VAR(USE_SECONDARY_ENGINE=FORCED) */ * 
@@ -49,7 +49,7 @@ FROM(
                  (SELECT /*+ SET_VAR(USE_SECONDARY_ENGINE=FORCED) */ AVG(SS_NET_PROFIT) RANK_COL 
                   FROM STORE_SALES 
                   WHERE SS_STORE_SK = 366 
-                  AND SS_DEMO_SK IS NULL 
+                  AND SS_HDEMO_SK IS NULL 
                   GROUP BY SS_STORE_SK))V2)V21 
     WHERE RNK < 11) DESCENDING
     , ITEM I1
