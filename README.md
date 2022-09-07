@@ -9,3 +9,4 @@ Your applications connect to the HeatWave cluster through standard MySQL protoco
 This repository contains sub-folder(s) that have files pertaining to specific performance benchmarks
 * [CH-benCHmark](heatwave-chbench) - contains files that were modified in the OLPTBench benchmark code for testing mixed workloads (CH-benCHmark) against MYSQL HeatWave
 * [TPC-DS](heatwave-tpcds) - contains SQL scripts for testing TPCDS queries against MySQL HeatWave
+* [MySQL-tpcc](heatwave-mysql-tpcc)- contains instructions for running the TPCC benchmark against MySQL cloud service
