@@ -14,7 +14,7 @@ This repository contains sub-folder(s) that have files pertaining to specific pe
 * [CH-benCHmark](heatwave-chbench) - contains files that were modified in the OLPTBench benchmark code for testing mixed workloads (CH-benCHmark) against MYSQL HeatWave on OCI
 * [MySQL-tpcc](heatwave-mysql-tpcc)- contains instructions for running the TPCC benchmark against MySQL HeatWave on AWS
 
-TPCH related scripts and instructions are provided at
-* [TPC-H][1]
+Other MySQL HeatWave related scripts and instructions are provided at
+* [TPC-H][1] - contains SQL scripts for testing TPC-H queries against MySQL HeatWave on OCI or MySQL HeatWave on AWS
 
 [1]: https://github.com/oracle/heatwave-tpch
