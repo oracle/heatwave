@@ -15,6 +15,6 @@ This repository contains sub-folder(s) that have files pertaining to specific pe
 * [MySQL-tpcc](heatwave-mysql-tpcc)- contains instructions for running the TPCC benchmark against MySQL HeatWave on AWS
 
 TPCH related scripts and instructions are provided at
-* [https://github.com/oracle/heatwave-tpch] [1]
+* [TPC-H][1]
 
 [1]: https://github.com/oracle/heatwave-tpch

@@ -1,6 +1,6 @@
 # MySQL HeatWave TPCC
 
-HeatWave is a fully managed and highly scalable in-memory database service which provides a cost-efficient solution for 
+MySQL HeatWave is a fully managed and highly scalable in-memory database service which provides a cost-efficient solution for 
 OLTP, OLAP and Machine Learning. It is available on both Oracle Cloud Infrastructure (OCI) and Amazon Web Service (AWS).
 
 HeatWave is tightly integrated with MySQL database and is optimized for underlying infrastructure.
@@ -14,18 +14,17 @@ using the [sysbench framework][2].
 
 ## Software prerequisites:
 1. [Sysbench tpcc][2] benchmark to generate and run TPC-C dataset and queries for workload sizes of your choice
-2. [MySQL Performance Benchmark kit][7] to get the LUA scripts that enable running sysbench with TPC-C
+2. [MySQL Performance Benchmark kit][5] to get the LUA scripts that enable running sysbench with TPC-C
 
 ## Required services:
-1. [Oracle Cloud Infrastructure][6]
-2. [MySQL Database Service][3] or [HeatWave on AWS]
-3. [HeatWave][4]
+1. [Oracle Cloud Infrastructure][4]
+2. [MySQL HeatWave on OCI][3] or [MySQL HeatWave on AWS]
 
 
 ## Getting started
 To run TPC-C queries in MySQL HeatWave
 1. Install sysbench from the [github repository of Akopytov][2]
-2. Download TPC-C specific LUA scripts from [MySQL Performance Benchmark kit][7]
+2. Download TPC-C specific LUA scripts from [MySQL Performance Benchmark kit][5]
      untar the above bundle under directory <yourhomedir>/BMK
      create a directory to store the output files
 ```
@@ -36,7 +35,7 @@ To run TPC-C queries in MySQL HeatWave
      BMK_HOME = os.getenc("BMK_HOME")
      if (BMK_HOME == nil) then BMK_HOME = "<yourhomedir>/BMK" end
 ```
-4. Provision MySQL Database Service instance. See [Getting Started with MySQL Database Service][5]
+4. Provision a MySQL Database System
 5. Assuming you have a running MySQL instance now, create the database. Below sample is for TPCC 100W.
 ```
      create database tpcc_100W
@@ -74,12 +73,10 @@ To run TPC-C queries in MySQL HeatWave
 
 [1]: http://www.tpc.org/tpcc/
 [2]: https://github.com/akopytov/sysbench
-[3]: https://docs.cloud.oracle.com/en-us/iaas/mysql-database/index.html
-[4]: https://docs.cloud.oracle.com/en-us/iaas/mysql-database/doc/mysql-analytics-engine.html
-[5]: https://docs.cloud.oracle.com/en-us/iaas/mysql-database/doc/getting-started.html
-[6]: https://docs.cloud.oracle.com/en-us/iaas/Content/home.htm
-[7]: http://dimitrik.free.fr/BMK-kit.tgz
-[8]: https://dev.mysql.com/doc/heatwave-aws/en/
+[3]: https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave.html
+[4]: https://docs.cloud.oracle.com/en-us/iaas/Content/home.htm
+[5]: http://dimitrik.free.fr/BMK-kit.tgz
+[6]: https://dev.mysql.com/doc/heatwave-aws/en/
 
 TPC Benchmark™, QppH, QthH, and QphH are trademarks of the Transaction Processing Performance Council.
 
