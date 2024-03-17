@@ -29,7 +29,7 @@ HeatWave. The schema and queries listed here are specifically for the 10TB scale
 * [HeatWave](10TB/HeatWave) - a collection of scripts to configure HeatWave to run TPC-DS queries
 
 ## Getting started
-To run TPC-DS queries in HeatWave
+### To run TPC-DS queries in HeatWave
 1. Generate TPC-DS data using TPC-DS data generation tool
 2. Provision MySQL Database Service instance. See [Getting Started with MySQL Database Service][6]
 3. Run [create_tables.sql](10TB/TPCDS/create_tables.sql) to create TPC-DS schema on MySQL Database Service instance 
@@ -37,6 +37,18 @@ To run TPC-DS queries in HeatWave
 5. Add a HeatWave cluster to MySQL Database Service instance. See [HeatWave][5] documentation
 6. Run [secondary_load.sql](10TB/HeatWave/secondary_load.sql) to configure and load data to HeatWave cluster
 7. You are now ready to run the queries derived from TPC-DS
+
+### To run TPC-DS queries in HeatWave Lakehouse
+1. Generate TPC-DS data using TPC-DS data generation tool
+2. Keep the generated data in an Object Store bucket in OCI (in the same region where the MySQL Database System will be provisioned). 
+   Note down the namespace and bucket information.
+3. Provision MySQL Database Service instance. See [Getting Started with MySQL Database Service][6]
+4. Add a HeatWave cluster to MySQL Database Service instance. See [HeatWave][5] documentation
+5. Run [create_tables_lakehouse.sql](10TB/TPCDS/create_tables_lakehouse.sql) to create TPC-DS schema for MySQL HeatWave Lakehouse on MySQL Database Service instance.
+   Make sure to fill in the appropriate **\<region\>**, **\<namespace\>**, **\<bucket\>** and **\<name\>** information in the script. 
+6. For larger scale TPC_DS datasets, you might need to modify your table definitions in [create_tables_lakehouse.sql](10TB/TPCDS/create_tables_lakehouse.sql) to account for larger data values (BIGINTS instead of INTEGER) in certain columns.
+7. Run [secondary_load_lakehouse.sql](10TB/HeatWave/secondary_load_lakehouse.sql) to configure and load data to HeatWave cluster
+8. You are now ready to run the queries derived from TPC-DS
  
 
 [1]: http://www.tpc.org/tpcds/
